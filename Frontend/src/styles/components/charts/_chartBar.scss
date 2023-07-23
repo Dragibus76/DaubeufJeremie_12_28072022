@@ -1,0 +1,60 @@
+.chartBar {
+  color: $color_black;
+  width: 100%;
+
+  &__topContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    &--title {
+      font-size: 15px;
+      color: $color_black;
+      font-weight: 500;
+    }
+
+    &__rightInfo {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      &--text {
+        margin: 0;
+        color: #74798c;
+      }
+
+      &__weightContainer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-right: 30px;
+
+        &--dot {
+          height: 8px;
+          width: 8px;
+          background-color: $color_red;
+          border-radius: 100px;
+          margin-right: 7px;
+          margin-bottom: -5px;
+        }
+      }
+
+      &__caloriesContainer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-right: 30px;
+
+        &--dot {
+          height: 8px;
+          width: 8px;
+          background-color: $color_black;
+          border-radius: 100px;
+          margin-right: 7px;
+          margin-bottom: -5px;
+        }
+      }
+    }
+  }
+}

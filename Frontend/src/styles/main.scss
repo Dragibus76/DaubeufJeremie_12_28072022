@@ -1,0 +1,12 @@
+@import "./utils/variables";
+@import "./_global";
+
+// pages
+@import "./pages/_home";
+
+// component
+@import "./components/charts/chartBar";
+@import "./components//charts/chatLine";
+@import "./components/charts/chartRadar";
+@import "./components/charts/chartCircle";
+@import "./components/cardInfo";

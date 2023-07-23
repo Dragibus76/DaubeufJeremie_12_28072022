@@ -1,0 +1,36 @@
+.chartCircle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 31%;
+  aspect-ratio: 1;
+  border-radius: 5px;
+  background-color: #fbfbfb;
+  position: relative;
+
+  &--score {
+    position: absolute;
+    left: 20px;
+    top: -5px;
+    color: #282D30;
+    font-weight: 900;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+
+    &--title {
+      font-size: 24px;
+      font-weight: 900;
+      margin: 0;
+      color: #282D30;
+    }
+    &--subTitle {
+      font-weight: 700;
+      margin: 0;
+      color: #74798c;
+    }
+  }
+}
