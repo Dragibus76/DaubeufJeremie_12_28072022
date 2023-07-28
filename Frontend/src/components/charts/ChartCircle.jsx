@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
 import {
-  Legend,
   RadialBarChart,
   RadialBar,
-  Tooltip,
   ResponsiveContainer,
 } from "recharts";
 import { useData } from "../../hooks/useData";

@@ -1,10 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import {
-  BarChart,
-  Bar,
   XAxis,
   YAxis,
-  Legend,
   Tooltip,
   CartesianGrid,
   LineChart,

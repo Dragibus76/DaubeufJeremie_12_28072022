@@ -6,6 +6,7 @@ const CardInfo = ({ title, number, value, bgc, icon, style, iconStyle }) => {
       <div className="cardInfo__iconContainer" style={{backgroundColor: bgc}}>
         <img
           src={icon || require("./../assets/images/icon_fire.png")}
+          alt="logo card"
           style={{ height: 20, width: 15.18, ...iconStyle }}
         />
       </div>

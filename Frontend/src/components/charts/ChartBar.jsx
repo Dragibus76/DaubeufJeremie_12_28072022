@@ -4,16 +4,15 @@ import {
   Bar,
   XAxis,
   YAxis,
-  Legend,
   Tooltip,
   CartesianGrid,
-  Cell,
+ 
   ResponsiveContainer,
 } from "recharts";
 import { useData } from "../../hooks/useData";
 
 const ChartBar = () => {
-  const { user, activity } = useData();
+  const { activity } = useData();
 
   return (
     <div className="chartBar">

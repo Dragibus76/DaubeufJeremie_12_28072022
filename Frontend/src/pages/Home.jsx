@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import ChartBar from "../components/charts/ChartBar";
 import ChartLine from "../components/charts/ChartLine";
 import ChartRadar from "../components/charts/ChartRadar";
@@ -57,6 +57,7 @@ const Home = () => {
         <div className="home__header__logo">
           <img
             src={require("./../assets/images/logo.png")}
+            alt="Logo SportSee"
             className="home__header__logo--img"
           />
           <p className="home__header__logo--text">SportSee</p>
@@ -82,24 +83,28 @@ const Home = () => {
             <div className="home__content__menu__btn--global">
               <img
                 src={require("./../assets/images/menu_1.png")}
+                alt="logo yoga"
                 className="home__content__menu__btn--first"
               />
             </div>
             <div className="home__content__menu__btn--global">
               <img
                 src={require("./../assets/images/menu_2.png")}
+                alt="logo nage"
                 className="home__content__menu__btn--second"
               />
             </div>
             <div className="home__content__menu__btn--global">
               <img
                 src={require("./../assets/images/menu_3.png")}
+                alt="logo velo"
                 className="home__content__menu__btn--third"
               />
             </div>
             <div className="home__content__menu__btn--global">
               <img
                 src={require("./../assets/images/menu_4.png")}
+                alt="logo musculation"
                 className="home__content__menu__btn--forth"
               />
             </div>
