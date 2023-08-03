@@ -1,16 +1,24 @@
-import "./App.css";
-import Router from "./Router";
-import "./styles/main.scss";
-import DataContextProvider from "./hooks/useData";
+import React from "react";
+import { Route, Routes, BrowserRouter } from "react-router-dom";
+import Header from "./components/Header";
+import SideBar from "./components/SideBar";
+import Home from "./pages/Home";
+import Error from "./pages/Error";
+import User from "./pages/User";
 
-function App() {
+export default function App() {
+    
   return (
-    <div className="App">
-      <DataContextProvider>
-        <Router></Router>
-      </DataContextProvider>
-    </div>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <Header />
+    <SideBar />
+    <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/user/:id" element={<User />} />
+        <Route path="*" element={<Error />} />
+    </Routes>
+  </BrowserRouter>
   );
 }
 
-export default App;
+
