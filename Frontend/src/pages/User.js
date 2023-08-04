@@ -1,10 +1,8 @@
-import React from "react";
-import { useState, useEffect } from "react";
-import { getData } from "../utils/getData";
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router";
 import SideBar from "../components/SideBar";
 import UserInfos from "../components/UserInfos";
-import {Main, Container, Content, BottomChart} from "../styles/userStyle";
+import { Main, Container, Content, BottomChart } from "../styles/userStyle";
 import caloriesIcon from "../assets/calories-icon.svg";
 import proteinsIcon from "../assets/proteines-icon.svg";
 import glucidesIcon from "../assets/glucides-icon.svg";
@@ -14,31 +12,29 @@ import ScoreChart from "../components/ScoreChart";
 import KeyData from "../components/KeyData";
 import UserAverageSessions from "../components/UserAverageSession";
 import UserPerformance from "../components/UserPerformance";
+import UserData from '../class/UserData';
 
-/**Render the dashboard
- * @return {JSX}
- */
- export default function User() {
-     
+export default function User() {
   const [data, setData] = useState([]);
   const { id } = useParams();
-  
+
   useEffect(() => {
-    const data = async () => {
-      const request = await getData("USER_MAIN_DATA",id);
-      if (!request) return alert("data error");
-      setData(request.data);
+    const fetchData = async () => {
+      const formatData = await UserData.fetchData(id);
+      if (!formatData) return alert("data error");
+      setData(formatData);
     };
-    data();
+    fetchData();
   }, [id]);
+
   if (data.length === 0) return null;
 
   return (
     <Main>
       <SideBar />
       <Container>
-      <UserInfos name={data.userInfos.firstName} />
-      <Content>
+        <UserInfos name={data.userInfos.firstName} />
+        <Content>
           <section>
             <BarCharts />
             <BottomChart>

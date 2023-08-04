@@ -1,19 +1,11 @@
 import React from "react";
-import {Container, Title, Text, Score} from "../styles/scoreChartStyle"
+import { Container, Title, Text, Score } from "../styles/scoreChartStyle";
 import { ResponsiveContainer, PieChart, Pie, Cell } from "recharts";
 import PropTypes from "prop-types";
+import UserScoreChartData from '../class/UserScoreChartsData';
 
-
-/** create a PieChart with score value
- * @param  {object} {data}
- * @return {JSX}
- */
- export default function ScoreChart({ data }) {
-     
-  const score = [
-    { value: data.todayScore || data.score },
-    { value: 1 - data.todayScore || data.score },
-  ];
+export default function ScoreChart({ data }) {
+  const score = UserScoreChartData.formatData(data);
 
   return (
     <Container>
@@ -39,7 +31,8 @@ import PropTypes from "prop-types";
       </ResponsiveContainer>
       <Text>
         <Score>
-          {score[0].value * 100}%<br />
+          {score[0].value * 100}%
+          <br />
         </Score>
         de votre
         <br /> objectif
@@ -51,4 +44,3 @@ import PropTypes from "prop-types";
 ScoreChart.propTypes = {
   data: PropTypes.object,
 };
-
