@@ -2,6 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { Main, Title } from "../styles/homeStyle";
 
+
 export default function Home (){
     
   return (
